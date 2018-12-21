@@ -1,15 +1,15 @@
-# broccoli-meta-image
+# broccoli-image-meta
 
-[![Build Status](https://travis-ci.org/BBVAEngineering/broccoli-meta-image.svg?branch=master)](https://travis-ci.org/BBVAEngineering/broccoli-meta-image)
-[![GitHub version](https://badge.fury.io/gh/BBVAEngineering%2Fbroccoli-meta-image.svg)](https://badge.fury.io/gh/BBVAEngineering%2Fbroccoli-meta-image)
-[![NPM version](https://badge.fury.io/js/broccoli-meta-image.svg)](https://badge.fury.io/js/broccoli-meta-image)
-[![Dependency Status](https://david-dm.org/BBVAEngineering/broccoli-meta-image.svg)](https://david-dm.org/BBVAEngineering/broccoli-meta-image)
-[![codecov](https://codecov.io/gh/BBVAEngineering/broccoli-meta-image/branch/master/graph/badge.svg)](https://codecov.io/gh/BBVAEngineering/broccoli-meta-image)
-[![Greenkeeper badge](https://badges.greenkeeper.io/BBVAEngineering/broccoli-meta-image.svg)](https://greenkeeper.io/)
+[![Build Status](https://travis-ci.org/BBVAEngineering/broccoli-image-meta.svg?branch=master)](https://travis-ci.org/BBVAEngineering/broccoli-image-meta)
+[![GitHub version](https://badge.fury.io/gh/BBVAEngineering%2Fbroccoli-image-meta.svg)](https://badge.fury.io/gh/BBVAEngineering%2Fbroccoli-image-meta)
+[![NPM version](https://badge.fury.io/js/broccoli-image-meta.svg)](https://badge.fury.io/js/broccoli-image-meta)
+[![Dependency Status](https://david-dm.org/BBVAEngineering/broccoli-image-meta.svg)](https://david-dm.org/BBVAEngineering/broccoli-image-meta)
+[![codecov](https://codecov.io/gh/BBVAEngineering/broccoli-image-meta/branch/master/graph/badge.svg)](https://codecov.io/gh/BBVAEngineering/broccoli-image-meta)
+[![Greenkeeper badge](https://badges.greenkeeper.io/BBVAEngineering/broccoli-image-meta.svg)](https://greenkeeper.io/)
 
 ## Information
 
-[![NPM](https://nodei.co/npm/broccoli-meta-image.png?downloads=true&downloadRank=true)](https://nodei.co/npm/broccoli-meta-image/)
+[![NPM](https://nodei.co/npm/broccoli-image-meta.png?downloads=true&downloadRank=true)](https://nodei.co/npm/broccoli-image-meta/)
 
 Copy and resizes images given an input tree.
 
@@ -17,12 +17,12 @@ Copy and resizes images given an input tree.
 
 ## Installation & usage
 
-`npm install --save broccoli-meta-image`
+`npm install --save broccoli-image-meta`
 
 
 ```javascript
 // Raw
-const Thumbnail = require('broccoli-meta-image');
+const Thumbnail = require('broccoli-image-meta');
 
 const myTree = new Funnel('assets/images');
 const thumbnailTree = new Thumbnail(myTree, {
@@ -33,7 +33,7 @@ const thumbnailTree = new Thumbnail(myTree, {
 
 ```javascript
 // Ember addon style
-const Thumbnail = require('broccoli-meta-image');
+const Thumbnail = require('broccoli-image-meta');
 
 module.exports = {
   // ...
@@ -54,11 +54,11 @@ module.exports = {
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/BBVAEngineering/broccoli-meta-image/tags).
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/BBVAEngineering/broccoli-image-meta/tags).
 
 ## Authors
 
-See the list of [contributors](https://github.com/BBVAEngineering/broccoli-meta-image/graphs/contributors) who participated in this project.
+See the list of [contributors](https://github.com/BBVAEngineering/broccoli-image-meta/graphs/contributors) who participated in this project.
 
 ## License
 

@@ -1,5 +1,5 @@
 {
-  "name": "broccoli-meta-image",
+  "name": "broccoli-image-meta",
   "version": "1.0.0",
   "description": "Get meta data from a given image tree",
   "main": "index.js",
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BBVAEngineering/broccoli-meta-image.git"
+    "url": "git+https://github.com/BBVAEngineering/broccoli-image-meta.git"
   },
   "keywords": [
     "brocoli",
@@ -43,14 +43,14 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/BBVAEngineering/broccoli-meta-image/issues"
+    "url": "https://github.com/BBVAEngineering/broccoli-image-meta/issues"
   },
-  "homepage": "https://github.com/BBVAEngineering/broccoli-meta-image#readme",
+  "homepage": "https://github.com/BBVAEngineering/broccoli-image-meta#readme",
   "engines": {
     "node": ">= 8.*"
   },
   "dependencies": {
-    "broccoli-persistent-filter": "2.1.1",
+    "broccoli-caching-writer": "^3.0.3",
     "color-thief": "2.2.3",
     "fs-extra": "^7.0.1",
     "image-size": "0.6.3",

@@ -1,5 +1,5 @@
 'use strict';
 
-const MetaData = requiere('./lib/get-image-meta');
+const JsonImageMeta = require('./lib/get-image-meta');
 
-module.exports = MetaData;
+module.exports = JsonImageMeta;
