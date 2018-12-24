@@ -11,9 +11,9 @@
 
 [![NPM](https://nodei.co/npm/broccoli-image-meta.png?downloads=true&downloadRank=true)](https://nodei.co/npm/broccoli-image-meta/)
 
-Copy and resizes images given an input tree.
+Process a source of images and generate a JSON with image metadata.
 
-**Why?** For example, to generate a low quality copy of each image and improve the page speed when loading.
+**Why?** For example, to create a component able to load a thumbnail or a colored box while the real image still loading.
 
 ## Installation & usage
 
@@ -22,12 +22,16 @@ Copy and resizes images given an input tree.
 
 ```javascript
 // Raw
-const Thumbnail = require('broccoli-image-meta');
+const ImageMeta = require('broccoli-image-meta');
+const { color, dimensions } = ImageMeta;
 
 const myTree = new Funnel('assets/images');
-const thumbnailTree = new Thumbnail(myTree, {
-  width: 128,
-  prefix: 'small-'
+const thumbnailTree = new ImageMeta(myTree, {
+  outputFile: 'meta.json',
+  globs: [
+    '**/*.{jpg,jpeg,gif,png}'
+  ],
+  filters: [color, dimensions]
 });
 ```
 
@@ -39,18 +43,25 @@ module.exports = {
   // ...
 
   treeForPublic() {
-    return new Thumbnail('assets/images');
+    return new ImageMeta('assets/images', { /* options */ });
   }
 };
 ```
 
 ## Options
 
-| Option | Type     | Defaults                      | Description                               |
-|--------|----------|-------------------------------|-------------------------------------------|
-| prefix | `String` | `thumbnail_`                  | Prefix to be added on each thumbnail name |
-| globs  | `Array`  | `['**/*.(jpg|jpeg|gif|png)']` | Files to be processed                     |
-| width  | `Number` | `64`                          | Thumbnail width                           |
+| Option     | Type     | Defaults                      | Description           |
+|------------|----------|-------------------------------|-----------------------|
+| outputFile | `String` | `meta.json`                   | Output file name      |
+| globs      | `Array`  | `['**/*.(jpg|jpeg|gif|png)']` | Files to be processed |
+| filters    | `Array`  | `[]`                          | Image preprocessors   |
+
+## Filters
+
+The filter is just a `Function` that must return an `Object` (promise compatible) and receiver an [Entry](https://github.com/joliss/node-walk-sync#entries).
+The object will be merged with the rest of the data created by other filters.
+
+[Examples in `lib/filters/`](./lib/filters/).
 
 ## Versioning
 

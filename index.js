@@ -1,5 +1,8 @@
 'use strict';
 
-const JsonImageMeta = require('./lib/get-image-meta');
+const ImageMeta = require('./lib/image-meta');
+const dimensions = require('./lib/filters/dimensions');
+const color = require('./lib/filters/color');
 
-module.exports = JsonImageMeta;
+module.exports = ImageMeta;
+module.exports.filters = { color, dimensions };
