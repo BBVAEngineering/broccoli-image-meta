@@ -4,7 +4,7 @@
   "description": "Get meta data from a given image tree",
   "main": "index.js",
   "scripts": {
-    "test": "nyc --reporter=html --reporter=json --reporter=json-summary --reporter=lcov mocha ./tests",
+    "test": "nyc --reporter=html --reporter=json --reporter=json-summary --reporter=lcov mocha --recursive tests",
     "lint:js": "eslint --ext .js --max-warnings 0 ./*.js lib tests",
     "report-coverage": "istanbul report --include=coverage/coverage-final.json text",
     "check-coverage": "istanbul check-coverage coverage/coverage-final.json --statements 100 --functions 100 --branches 100 --lines 100",
@@ -67,7 +67,7 @@
     "chai": "^4.2.0",
     "commitizen": "^3.0.5",
     "cz-conventional-changelog": "^2.1.0",
-    "eslint": "^3.0.0",
+    "eslint": "^5.1.0",
     "eslint-config-bbva": "^2.0.0",
     "husky": "1.2.1",
     "istanbul": "^0.4.5",
