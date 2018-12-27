@@ -31,6 +31,26 @@ describe('broccoli-lint-remark', function() {
 		expect(ImageMeta).to.exist; // eslint-disable-line
 	});
 
+	it('sets default options', async function() {
+		input.write({
+			'a.txt': 'a.txt',
+			'a.log': 'a.log'
+		});
+		const outputFile = 'foo.json';
+		const tree = new Funnel(input.path());
+		const pluginInstance = new ImageMeta(tree);
+
+		output = createBuilder(pluginInstance);
+
+		await output.build();
+
+		const files = Object.keys(output.read());
+		const meta = await fs.readFile(path.join(output.dir, files[0]), 'utf-8');
+
+		expect(files).to.deep.equal(['meta.json']);
+		expect(meta).to.be.equal('{"troll.jpg":{}}');
+	});
+
 	it('outputs a JSON given a glob expression and an output file name', async function() {
 		input.write({
 			'a.txt': 'a.txt',
@@ -94,6 +114,6 @@ describe('broccoli-lint-remark', function() {
 		const meta = await fs.readFile(path.join(output.dir, files[0]), 'utf-8');
 
 		expect(files).to.deep.equal([outputFile]);
-		expect(meta).to.deep.equal('export default {"troll.jpg":{}}');
+		expect(meta).to.be.equal('export default {"troll.jpg":{}}');
 	});
 });
