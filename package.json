@@ -1,6 +1,6 @@
 {
   "name": "broccoli-image-meta",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "Get meta data from a given image tree",
   "main": "index.js",
   "scripts": {
