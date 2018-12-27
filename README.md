@@ -50,11 +50,12 @@ module.exports = {
 
 ## Options
 
-| Option     | Type     | Defaults                      | Description           |
-|------------|----------|-------------------------------|-----------------------|
-| outputFile | `String` | `meta.json`                   | Output file name      |
-| globs      | `Array`  | `['**/*.(jpg|jpeg|gif|png)']` | Files to be processed |
-| filters    | `Array`  | `[]`                          | Image preprocessors   |
+| Option       | Type       | Defaults                         | Description                             |
+|--------------|------------|----------------------------------|-----------------------------------------|
+| outputFile   | `String`   | `meta.json`                      | Output file name                        |
+| globs        | `Array`    | `['**/*.(jpg|jpeg|gif|png)']`    | Files to be processed                   |
+| filters      | `Array`    | `[]`                             | Image preprocessors                     |
+| formatOutput | `Function` | `(meta) => JSON.stringify(meta)` | Content to write inside the output file |
 
 ## Filters
 

@@ -31,8 +31,7 @@ describe('filters/dimensions', function() {
 		expect(hex).to.be.an('object');
 		expect(hex.dimensions).to.be.deep.equal({
 			width: 469,
-			height: 428,
-			type: 'jpg'
+			height: 428
 		});
 	});
 });
