@@ -36,7 +36,6 @@ describe('broccoli-lint-remark', function() {
 			'a.txt': 'a.txt',
 			'a.log': 'a.log'
 		});
-		const outputFile = 'foo.json';
 		const tree = new Funnel(input.path());
 		const pluginInstance = new ImageMeta(tree);
 
