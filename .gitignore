@@ -1,14 +1,16 @@
+# compiled output
+/dist
+/tmp
+
 # dependencies
 /node_modules
+/bower_components
 
 # misc
 /.sass-cache
-/.nyc_output
 /connect.lock
 /coverage/*
 /libpeerconnection.log
 npm-debug.log*
-yarn-error.log
 testem.log
 tags*
-/.nyc_output
