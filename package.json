@@ -4,15 +4,14 @@
   "description": "Get meta data from a given image tree",
   "main": "index.js",
   "scripts": {
-    "test": "COVERAGE=true ember test",
-    "lint:js": "eslint --max-warnings 0 ./*.js addon app config tests",
+    "test": "nyc --reporter=html --reporter=json --reporter=json-summary --reporter=lcov mocha ./tests",
+    "lint:js": "eslint --ext .js --max-warnings 0 ./*.js lib tests",
     "report-coverage": "istanbul report --include=coverage/coverage-final.json text",
     "check-coverage": "istanbul check-coverage coverage/coverage-final.json --statements 100 --functions 100 --branches 100 --lines 100",
     "posttest": "npm run report-coverage && npm run check-coverage",
     "commit": "git-cz",
     "semantic-release": "semantic-release",
-    "travis-deploy-once": "travis-deploy-once",
-    "lint:hbs": "ember-template-lint ."
+    "travis-deploy-once": "travis-deploy-once"
   },
   "config": {
     "commitizen": {
