@@ -87,7 +87,7 @@ describe('broccoli-lint-remark', function() {
 		expect(files).to.deep.equal([outputFile]);
 		expect(meta).to.deep.equal({
 			'troll.jpg': {
-				color: '#0a0a0a',
+				color: '#7e7e7e',
 				dimensions: {
 					height: 428,
 					width: 469

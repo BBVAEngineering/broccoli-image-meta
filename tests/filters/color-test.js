@@ -29,6 +29,6 @@ describe('filters/color', function() {
 		});
 
 		expect(hex).to.be.an('object');
-		expect(hex.color).to.be.equal('#0a0a0a');
+		expect(hex.color).to.be.equal('#7e7e7e');
 	});
 });
