@@ -18,19 +18,6 @@ stages:
 env:
   global:
     - JOBS=1
-    - CXX=g++-4.9
-
-addons:
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-    packages:
-      - libcairo2-dev
-      - libjpeg8-dev
-      - libpango1.0-dev
-      - libgif-dev
-      - librsvg2-dev
-      - g++-4.9
 
 jobs:
   fail_fast: true
