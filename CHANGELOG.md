@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/BBVAEngineering/broccoli-image-meta/compare/v1.0.1...v1.0.2) (2019-01-02)
+
+
+### Bug Fixes
+
+* **package:** update get-image-colors to version 2.0.0 ([2beda8c](https://github.com/BBVAEngineering/broccoli-image-meta/commit/2beda8c))
+
 ## [1.0.1](https://github.com/BBVAEngineering/broccoli-image-meta/compare/v1.0.0...v1.0.1) (2018-12-28)
 
 
