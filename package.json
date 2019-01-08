@@ -53,6 +53,7 @@
     "average-colour": "^0.0.1",
     "broccoli-caching-writer": "^3.0.3",
     "fs-extra": "^7.0.1",
+    "fs-tree-diff": "^1.0.2",
     "get-image-colors": "^2.0.0",
     "image-size": "^0.6.3",
     "walk-sync": "^1.0.1"
