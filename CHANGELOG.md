@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/BBVAEngineering/broccoli-image-meta/compare/v1.0.2...v1.0.3) (2019-01-08)
+
+
+### Bug Fixes
+
+* **dep:** missing dependency ([3ffe596](https://github.com/BBVAEngineering/broccoli-image-meta/commit/3ffe596))
+
 ## [1.0.2](https://github.com/BBVAEngineering/broccoli-image-meta/compare/v1.0.1...v1.0.2) (2019-01-02)
 
 
