@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/BBVAEngineering/broccoli-image-meta/compare/v1.0.3...v1.0.4) (2019-01-08)
+
+
+### Bug Fixes
+
+* **package:** update image-size to version 0.7.0 ([5e37686](https://github.com/BBVAEngineering/broccoli-image-meta/commit/5e37686))
+
 ## [1.0.3](https://github.com/BBVAEngineering/broccoli-image-meta/compare/v1.0.2...v1.0.3) (2019-01-08)
 
 
