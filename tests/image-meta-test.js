@@ -5,13 +5,14 @@ const expect = require('chai').expect;
 const testHelpers = require('broccoli-test-helper');
 const Funnel = require('broccoli-funnel');
 const fs = require('fs-extra');
-const ImageMeta = require('..');
+const ImageMeta = require('../lib/image-meta');
+const Plugin = require('..');
 
-const { color, dimensions } = ImageMeta.filters;
+const { color, dimensions } = Plugin.filters;
 const createBuilder = testHelpers.createBuilder;
 const createTempDir = testHelpers.createTempDir;
 
-describe('broccoli-lint-remark', function() {
+describe('image-meta', function() {
 	let input, output;
 
 	beforeEach(async function() {
@@ -31,6 +32,20 @@ describe('broccoli-lint-remark', function() {
 		expect(ImageMeta).to.exist; // eslint-disable-line
 	});
 
+	it('implements "baseDir()"', function() {
+		const pluginInstance = new ImageMeta('foo');
+
+		expect(pluginInstance.baseDir).to.be.a('function');
+		expect(pluginInstance.baseDir()).to.be.equal(process.cwd());
+	});
+
+	it('implements "cacheKeyProcessString()"', function() {
+		const pluginInstance = new ImageMeta('foo');
+
+		expect(pluginInstance.cacheKeyProcessString).to.be.a('function');
+		expect(pluginInstance.cacheKeyProcessString('a', 'b')).to.be.equal('a35aea60fe097c885568babb48ee7d1e');
+	});
+
 	it('sets default options', async function() {
 		input.write({
 			'a.txt': 'a.txt',
@@ -44,37 +59,16 @@ describe('broccoli-lint-remark', function() {
 		await output.build();
 
 		const files = Object.keys(output.read());
-		const meta = await fs.readFile(path.join(output.dir, files[0]), 'utf-8');
+		const meta = await fs.readFile(path.join(output.dir, files[2]), 'utf-8');
 
-		expect(files).to.deep.equal(['meta.json']);
+		expect(files).to.deep.equal(['a.log', 'a.txt', 'troll.jpg.json']);
 		expect(meta).to.be.equal('{"troll.jpg":{}}');
 	});
 
-	it('outputs a JSON given a glob expression and an output file name', async function() {
-		input.write({
-			'a.txt': 'a.txt',
-			'a.log': 'a.log'
-		});
-		const outputFile = 'foo.json';
-		const tree = new Funnel(input.path());
-		const pluginInstance = new ImageMeta(tree, {
-			globs: ['*.jpg'],
-			outputFile
-		});
-
-		output = createBuilder(pluginInstance);
-
-		await output.build();
-
-		expect(Object.keys(output.read())).to.deep.equal([outputFile]);
-	});
-
 	it('outputs a JSON given an input filters', async function() {
-		const outputFile = 'foo.json';
 		const tree = new Funnel(input.path());
 		const pluginInstance = new ImageMeta(tree, {
-			filters: [color, dimensions],
-			outputFile
+			filters: [color, dimensions]
 		});
 
 		output = createBuilder(pluginInstance);
@@ -84,7 +78,7 @@ describe('broccoli-lint-remark', function() {
 		const files = Object.keys(output.read());
 		const meta = await fs.readJSON(path.join(output.dir, files[0]), 'utf-8');
 
-		expect(files).to.deep.equal([outputFile]);
+		expect(files).to.deep.equal(['troll.jpg.json']);
 		expect(meta).to.deep.equal({
 			'troll.jpg': {
 				color: '#7e7e7e',
@@ -94,25 +88,5 @@ describe('broccoli-lint-remark', function() {
 				}
 			}
 		});
-	});
-
-	it('formats the output', async function() {
-		const formatOutput = (meta) => `export default ${JSON.stringify(meta)}`;
-		const outputFile = 'foo.json';
-		const tree = new Funnel(input.path());
-		const pluginInstance = new ImageMeta(tree, {
-			formatOutput,
-			outputFile
-		});
-
-		output = createBuilder(pluginInstance);
-
-		await output.build();
-
-		const files = Object.keys(output.read());
-		const meta = await fs.readFile(path.join(output.dir, files[0]), 'utf-8');
-
-		expect(files).to.deep.equal([outputFile]);
-		expect(meta).to.be.equal('export default {"troll.jpg":{}}');
 	});
 });

@@ -18,6 +18,7 @@ stages:
 env:
   global:
     - JOBS=1
+    - CI=true
 
 jobs:
   fail_fast: true

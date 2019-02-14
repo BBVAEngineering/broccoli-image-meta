@@ -37,13 +37,13 @@ const thumbnailTree = new ImageMeta(myTree, {
 
 ```javascript
 // Ember addon style
-const Thumbnail = require('broccoli-image-meta');
+const BroccoliImageMeta = require('broccoli-image-meta');
 
 module.exports = {
   // ...
 
   treeForPublic() {
-    return new ImageMeta('assets/images', { /* options */ });
+    return new BroccoliImageMeta('assets/images', { /* options */ });
   }
 };
 ```
@@ -53,13 +53,14 @@ module.exports = {
 | Option       | Type       | Defaults                         | Description                             |
 |--------------|------------|----------------------------------|-----------------------------------------|
 | outputFile   | `String`   | `meta.json`                      | Output file name                        |
-| globs        | `Array`    | `['**/*.(jpg|jpeg|gif|png)']`    | Files to be processed                   |
+| extensions   | `Array`    | `['jpg', 'jpeg', 'gif', 'png']`  | Files to be processed                   |
 | filters      | `Array`    | `[]`                             | Image preprocessors                     |
+| persist      | `Boolean`  | `true`                           | Use disk cache                          |
 | formatOutput | `Function` | `(meta) => JSON.stringify(meta)` | Content to write inside the output file |
 
 ## Filters
 
-The filter is just a `Function` that must return an `Object` (promise compatible) and receiver an [Entry](https://github.com/joliss/node-walk-sync#entries).
+The filter is just a `Function` that must return an `Object` (promise compatible) and receiver an `Entry` (an object with `basePath` and `relativePath`).
 The object will be merged with the rest of the data created by other filters.
 
 [Examples in `lib/filters/`](./lib/filters/).
