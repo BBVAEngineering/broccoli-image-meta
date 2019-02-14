@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/BBVAEngineering/broccoli-image-meta/compare/v1.0.4...v2.0.0) (2019-02-14)
+
+
+### Features
+
+* **plugin:** persist files in cache ([cb06527](https://github.com/BBVAEngineering/broccoli-image-meta/commit/cb06527))
+
+
+### BREAKING CHANGES
+
+* **plugin:** Allow to persist in disk
+
 ## [1.0.4](https://github.com/BBVAEngineering/broccoli-image-meta/compare/v1.0.3...v1.0.4) (2019-01-08)
 
 
