@@ -2,7 +2,7 @@
 
 const path = require('path');
 const expect = require('chai').expect;
-const ImageMeta = require('../..');
+const ImageMeta = require('..');
 
 const { color } = ImageMeta.filters;
 
@@ -24,7 +24,7 @@ describe('filters/color', function() {
 
 	it('returns the average color of an image', async function() {
 		const hex = await color({
-			basePath: path.resolve(__dirname, '..', 'assets'),
+			basePath: path.resolve(__dirname, 'assets'),
 			relativePath: 'troll.jpg'
 		});
 

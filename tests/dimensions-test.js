@@ -2,7 +2,7 @@
 
 const path = require('path');
 const expect = require('chai').expect;
-const ImageMeta = require('../..');
+const ImageMeta = require('..');
 
 const { dimensions } = ImageMeta.filters;
 
@@ -24,7 +24,7 @@ describe('filters/dimensions', function() {
 
 	it('returns the average dimensions of an image', async function() {
 		const hex = await dimensions({
-			basePath: path.resolve(__dirname, '..', 'assets'),
+			basePath: path.resolve(__dirname, 'assets'),
 			relativePath: 'troll.jpg'
 		});
 
