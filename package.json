@@ -54,7 +54,7 @@
     "broccoli-caching-writer": "^3.0.3",
     "broccoli-json-concat": "0.0.4",
     "fs-extra": "^7.0.1",
-    "fs-tree-diff": "^1.0.2",
+    "fs-tree-diff": "^2.0.0",
     "get-image-colors": "^2.0.0",
     "image-size": "^0.7.0",
     "walk-sync": "^1.0.1"
