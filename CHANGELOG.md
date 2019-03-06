@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/BBVAEngineering/broccoli-image-meta/compare/v2.0.0...v2.0.1) (2019-03-06)
+
+
+### Bug Fixes
+
+* **package:** update fs-tree-diff to version 2.0.0 ([4a204a0](https://github.com/BBVAEngineering/broccoli-image-meta/commit/4a204a0))
+
 # [2.0.0](https://github.com/BBVAEngineering/broccoli-image-meta/compare/v1.0.4...v2.0.0) (2019-02-14)
 
 
