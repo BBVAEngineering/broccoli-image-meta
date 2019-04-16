@@ -79,7 +79,7 @@
     "husky": "^1.2.1",
     "istanbul": "^0.4.5",
     "mocha": "^6.0.0",
-    "nyc": "^13.1.0",
+    "nyc": "^14.0.0",
     "path": "^0.12.7",
     "semantic-release": "^15.13.1",
     "travis-deploy-once": "^5.0.9"
