@@ -75,7 +75,7 @@
     "eslint": "^5.11.1",
     "eslint-config-bbva": "^2.0.3",
     "eslint-plugin-ember": "^6.1.0",
-    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-node": "^9.0.0",
     "husky": "^1.2.1",
     "istanbul": "^0.4.5",
     "mocha": "^6.0.0",
