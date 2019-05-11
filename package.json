@@ -53,7 +53,7 @@
     "average-colour": "^0.0.1",
     "broccoli-caching-writer": "^3.0.3",
     "broccoli-json-concat": "0.0.4",
-    "fs-extra": "^7.0.1",
+    "fs-extra": "^8.0.0",
     "fs-tree-diff": "^2.0.0",
     "get-image-colors": "^2.0.0",
     "image-size": "^0.7.0",
