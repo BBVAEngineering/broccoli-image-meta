@@ -1,3 +1,10 @@
+## [2.0.2](https://github.com/BBVAEngineering/broccoli-image-meta/compare/v2.0.1...v2.0.2) (2019-05-16)
+
+
+### Bug Fixes
+
+* **package:** update fs-extra to version 8.0.1 ([59b7c5f](https://github.com/BBVAEngineering/broccoli-image-meta/commit/59b7c5f)), closes [#13](https://github.com/BBVAEngineering/broccoli-image-meta/issues/13)
+
 ## [2.0.1](https://github.com/BBVAEngineering/broccoli-image-meta/compare/v2.0.0...v2.0.1) (2019-03-06)
 
 
