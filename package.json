@@ -57,7 +57,7 @@
     "fs-tree-diff": "^2.0.0",
     "get-image-colors": "^2.0.0",
     "image-size": "^0.7.0",
-    "walk-sync": "^1.0.1"
+    "walk-sync": "^2.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.0.0",
