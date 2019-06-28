@@ -1,3 +1,10 @@
+## [2.0.3](https://github.com/BBVAEngineering/broccoli-image-meta/compare/v2.0.2...v2.0.3) (2019-06-28)
+
+
+### Bug Fixes
+
+* **package:** update walk-sync to version 2.0.1 ([dfee85f](https://github.com/BBVAEngineering/broccoli-image-meta/commit/dfee85f)), closes [#22](https://github.com/BBVAEngineering/broccoli-image-meta/issues/22)
+
 ## [2.0.2](https://github.com/BBVAEngineering/broccoli-image-meta/compare/v2.0.1...v2.0.2) (2019-05-16)
 
 
