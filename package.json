@@ -74,7 +74,7 @@
     "ember-try": "^1.1.0",
     "eslint": "^6.1.0",
     "eslint-config-bbva": "^2.0.3",
-    "eslint-plugin-ember": "^6.1.0",
+    "eslint-plugin-ember": "^6.10.0",
     "eslint-plugin-node": "^8.0.0",
     "husky": "^3.0.0",
     "istanbul": "^0.4.5",
