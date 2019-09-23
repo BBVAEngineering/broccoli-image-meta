@@ -56,7 +56,7 @@
     "fs-extra": "^8.0.1",
     "fs-tree-diff": "^2.0.0",
     "get-image-colors": "^2.0.0",
-    "image-size": "^0.7.0",
+    "image-size": "^0.8.2",
     "walk-sync": "^2.0.1"
   },
   "devDependencies": {
